@@ -5,6 +5,7 @@ import styled from 'styled-components';
 
 export default function Home() {
   const [name, setName] = useState('Cllaude99');
+
   return (
     <Container>
       <Title>애플후레시</Title>

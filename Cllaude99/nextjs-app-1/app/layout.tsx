@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import StyledComponentsRegistry from '@/lib/registry';
 import Setting from '@/components/Setting';
+import Header from '@/components/header';
 
 export const metadata: Metadata = {
   title: 'nextjs-project01',
@@ -17,7 +18,10 @@ export default function RootLayout({
     <html lang="ko">
       <body>
         <StyledComponentsRegistry>
-          <Setting>{children}</Setting>
+          <Setting>
+            <Header />
+            {children}
+          </Setting>
         </StyledComponentsRegistry>
       </body>
     </html>
