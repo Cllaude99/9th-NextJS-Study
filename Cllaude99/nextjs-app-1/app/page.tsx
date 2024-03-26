@@ -3,9 +3,5 @@
 import styled from 'styled-components';
 
 export default function Home() {
-  return <Container>hello</Container>;
+  return <div>hello</div>;
 }
-
-const Container = styled.div`
-  color: ${(props) => props.theme.black.darker};
-`;
