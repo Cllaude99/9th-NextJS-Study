@@ -1,21 +1,18 @@
 'use client';
 
+import CartItem from '@/components/Cart/CartItem';
+import { products } from '@/shared/const';
 import styled from 'styled-components';
 
 export default function Cart() {
   return (
     <Container>
       <Title>Cart</Title>
-      <div className="cart-item">
-        <p>상품명</p>
-        <p>$40</p>
-        <p>1개</p>
-      </div>
-      <div className="cart-item">
-        <p>상품명</p>
-        <p>$40</p>
-        <p>1개</p>
-      </div>
+      <MenuList>
+        {products.map((item) => (
+          <CartItem name={item.name} cost={item.cost} num={item.num} />
+        ))}
+      </MenuList>
     </Container>
   );
 }
@@ -28,4 +25,12 @@ const Container = styled.div`
 `;
 const Title = styled.h4`
   margin: 50px 0px;
+`;
+const MenuList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  gap: 10px;
 `;

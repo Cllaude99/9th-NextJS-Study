@@ -2,12 +2,7 @@
 
 import styled from 'styled-components';
 import Image from 'next/image';
-
-const products = [
-  { id: 1, name: '토마토', pay: 40, imgs: '/imgs/food0.png' },
-  { id: 2, name: '파스타', pay: 20, imgs: '/imgs/food1.png' },
-  { id: 3, name: '코코넛', pay: 30, imgs: '/imgs/food2.png' },
-];
+import { products } from '@/shared/const';
 
 export default function List() {
   return (
@@ -22,7 +17,7 @@ export default function List() {
               width={100}
               height={100}
             />
-            {item.name} ${item.pay}
+            {item.name} ${item.cost}
           </Item>
         ))}
       </ItemList>
