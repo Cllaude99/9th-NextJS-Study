@@ -13,7 +13,8 @@ export const GlobalStyles = createGlobalStyle`
     body{
         line-height: 1.2;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        color: ${(props) => props.theme.black.darker};
+        background-color: ${(props) => props.theme.black.main};
+        color: ${(props) => props.theme.white.lighter};
     }
     button{
         border: 0;
