@@ -8,12 +8,15 @@ export default function Header() {
     <Nav>
       <Col>
         <Items>
-          <Link href={`/`}>
-            <Item>홈</Item>
-          </Link>
-          <Link href={`/list`}>
-            <Item>List</Item>
-          </Link>
+          <Item>
+            <Link href={`/`}>홈 </Link>
+          </Item>
+          <Item>
+            <Link href={`/list`}>List</Link>
+          </Item>
+          <Item>
+            <Link href={`/cart`}>Cart</Link>
+          </Item>
         </Items>
       </Col>
     </Nav>
@@ -33,5 +36,5 @@ const Items = styled.ul`
   align-items: center;
 `;
 const Item = styled.li`
-  margin: 0px 10px;
+  margin: 0px 20px;
 `;
